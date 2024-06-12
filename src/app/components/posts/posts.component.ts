@@ -49,7 +49,8 @@ export class PostsComponent {
               user: {
                 id: userData.id,
                 firstName: userData.firstName,
-                lastName: userData.lastName
+                lastName: userData.lastName,
+                image: userData.image
               }
             })
             this.posts.sort((a, b) => a.id - b.id)

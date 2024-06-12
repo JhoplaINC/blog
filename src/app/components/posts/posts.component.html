@@ -5,6 +5,7 @@
         <div class="post-header">
             <div class="author">
                 <p class="author-name">
+                    <img src="{{post.user.image}}" alt="Image">
                     {{post.user.firstName}} {{post.user.lastName}}
                 </p>
             </div>
@@ -18,6 +19,11 @@
             {{post.body}}
         </div>
         <div class="post-footer">
+            <span class="tags" *ngFor="let tag of post.tags">
+                <p class="tag">
+                    {{tag}}
+                </p>
+            </span>
             <span class="likes">
                 <fa-icon [icon]="faLike"></fa-icon> {{post.reactions.likes}}
             </span>

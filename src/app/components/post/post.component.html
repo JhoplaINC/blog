@@ -1,1 +1,28 @@
-<p>post works!</p>
+<div class="post">
+    <div class="post-header">
+        <h4>{{post.title}}</h4>
+        <div class="author-info">
+            <img src="{{post.user.image}}" alt="Photo">
+            <p> {{post.user.firstName}} {{post.user.lastName}} </p>
+        </div>
+    </div>
+    <div class="post-body">
+        <p>{{post.body}}</p>
+    </div>
+    <div class="post-footer">
+        <span class="likes">
+            <fa-icon [icon]="faLike"></fa-icon> {{post.reactions.likes}}
+        </span>
+        <span class="likes">
+            <fa-icon [icon]="faDislike"></fa-icon> {{post.reactions.dislikes}}
+        </span>
+        <span class="views">
+            <fa-icon [icon]="faView"></fa-icon> {{post.views}}
+        </span>
+        <div *ngFor="let tag of post.tags">
+            <p class="tag">
+                {{tag}}
+            </p>
+        </div>
+    </div>
+</div>
