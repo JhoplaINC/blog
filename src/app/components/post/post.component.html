@@ -20,9 +20,9 @@
             <fa-icon [icon]="faView"></fa-icon> {{post.views}}
         </span>
         <div *ngFor="let tag of post.tags">
-            <p class="tag">
+            <a routerLink="/posts/{{tag}}">
                 {{tag}}
-            </p>
+            </a>
         </div>
     </div>
 </div>

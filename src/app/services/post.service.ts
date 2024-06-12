@@ -28,4 +28,15 @@ export class PostService {
             }
         )
     }
+
+    async getPostsByTag(tag: any) {
+        return await axios.get(
+            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS_BY_TAG.replace('{tag}', tag.toString()),
+            {
+                headers: {
+                    Accept: 'application/json'
+                }
+            }
+        )
+    }
 }

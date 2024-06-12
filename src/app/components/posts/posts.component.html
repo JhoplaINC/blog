@@ -21,7 +21,9 @@
         <div class="post-footer">
             <span class="tags" *ngFor="let tag of post.tags">
                 <p class="tag">
-                    {{tag}}
+                    <a routerLink="/posts/{{tag}}">
+                        {{tag}}
+                    </a>
                 </p>
             </span>
             <span class="likes">
