@@ -7,16 +7,28 @@ import { properties } from '../properties/properties';
 })
 
 export class PostService {
-    async getPosts() {
+
+    async getAllPosts() {
         return await axios.get(
-            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS,
+            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS + '?limit=0',
             {
                 headers: {
                     Accept: 'application/json'
                 }
             }
         )
-    };
+    }
+
+    async getPosts() {
+        return await axios.get(
+            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS + '?limit=10',
+            {
+                headers: {
+                    Accept: 'application/json'
+                }
+            }
+        )
+    }
 
     async getPost(idPost: number) {
         return await axios.get(
@@ -31,7 +43,7 @@ export class PostService {
 
     async getPostsByTag(tag: any) {
         return await axios.get(
-            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS_BY_TAG.replace('{tag}', tag.toString()),
+            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS_BY_TAG.replace('{tag}', tag.toString()) + '?limit=10',
             {
                 headers: {
                     Accept: 'application/json'

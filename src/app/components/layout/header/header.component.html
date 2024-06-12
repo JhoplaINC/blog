@@ -12,6 +12,22 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page" routerLink="posts">Posts</a>
                 </li>
+                <li class="nav-item" id="categories_tab" (click)="toggleCategories()">
+                    <a class="nav-link">
+                        Categories
+                    </a>
+                </li>
+                <div class="categories-bar" [class.active]="categoriesVisible">
+                    <span (click)="closeCategories()" class="close-categories">&times;</span>
+                    <div class="tags">
+                        <div *ngFor="let tag of tags" class="tag-container">
+                            <a class="tag" routerLink="posts/{{tag.name}}" (click)="closeCategories()">
+                                {{tag.name}}
+                            </a>
+                            <span class="tag-total">{{tag.total}}</span>
+                        </div>
+                    </div>
+                </div>
             </ul>
         </div>
     </div>

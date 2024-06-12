@@ -1,0 +1,59 @@
+.categories-bar {
+    background-color: var(--bs-dark);
+    color: rgb(225, 225, 225);
+    height: 94.1vh;
+    max-height: 94.1vh;
+    overflow-y: auto;
+    left: -256px;
+    position: absolute;
+    transition: left 0.3s ease;
+    top: 56px;
+    width: 200px;
+}
+
+.categories-bar.active {
+    left: 0;
+}
+
+.close-categories {
+    font-size: 36px;
+    position: relative;
+    width: 100%;
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tag-container {
+    align-items: center;
+    background-color: rgb(240, 235, 200);
+    border-radius: 6px;
+    color: rgb(75, 75, 75);
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 15px;
+    padding: 2px 5px;
+}
+
+.tags .tag {
+    color: rgb(75, 75, 75);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.tags .tag:hover {
+    color: rgb(35, 35, 35);
+}
+
+.tag-total {
+    font-size: 10px;
+}
