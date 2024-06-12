@@ -9,7 +9,7 @@ import { properties } from '../properties/properties';
 export class PostService {
     async getPosts() {
         return await axios.get(
-            properties.API.BASE + properties.API.ENDPOINTS.POSTS,
+            properties.API.BASE + properties.API.ENDPOINTS.GET_POSTS,
             {
                 headers: {
                     Accept: 'application/json'
@@ -20,7 +20,7 @@ export class PostService {
 
     async getPost(idPost: number) {
         return await axios.get(
-            properties.API.BASE + properties.API.ENDPOINTS.POST.replace('{idPost}', idPost.toString()),
+            properties.API.BASE + properties.API.ENDPOINTS.GET_POST.replace('{idPost}', idPost.toString()),
             {
                 headers: {
                     Accept: 'application/json'

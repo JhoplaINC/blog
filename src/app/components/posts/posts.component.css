@@ -1,0 +1,18 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.posts .post {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 50px;
+}
+
+.post .post-body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

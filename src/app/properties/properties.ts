@@ -4,8 +4,9 @@ export const properties = {
     API: {
         BASE: 'https://dummyjson.com',
         ENDPOINTS: {
-            POSTS: '/posts',
-            POST: '/post/{idPost}'
+            GET_POSTS: '/posts',
+            GET_POST: '/post/{idPost}',
+            GET_USER: '/user/{idUser}'
         }
     }
 }
