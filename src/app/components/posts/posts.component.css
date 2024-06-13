@@ -6,7 +6,7 @@
 }
 
 .posts .post {
-    border-radius: 25px;
+    border-radius: 8px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.05);;
     display: flex;
     flex-direction: column;
@@ -111,4 +111,22 @@
 
 .interaction fa-icon {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .posts {
+        width: 95%;
+    }
+
+    .tags span {
+        text-align: center;
+    }
+
+    .tags .tag {
+        padding: 2px 10px;
+    }
+
+    .post-footer .interactions {
+        justify-content: center;
+    }
 }

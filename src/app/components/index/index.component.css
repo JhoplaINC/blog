@@ -11,7 +11,7 @@ h1 {
 .description-container {
     align-items: center;
     background-color: rgba(55, 55, 55, .2);
-    border-radius: 45px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     margin: 0 auto 45px;
@@ -21,11 +21,13 @@ h1 {
 
 .description-container h4 {
     text-decoration: underline;
+    padding: 5px 15px;
 }
 
 .description-container p {
     font-size: 18px;
     margin-top: 15px;
+    padding: 5px 15px;
 }
 
 .description-container p a {
@@ -34,4 +36,10 @@ h1 {
 
 .description-container p a:hover {
     color: rgb(35, 35, 35);
+}
+
+@media screen and (max-width: 768px) {
+    .description-container {
+        width: 95%;
+    }
 }

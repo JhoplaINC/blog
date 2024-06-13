@@ -4,7 +4,8 @@ footer {
   display: flex;
   font-size: 16px;
   flex-direction: row;
-  height: 250px;
+  padding: 2rem 1em;
+  height: auto;
 }
 
 footer .footer-section {
@@ -55,4 +56,14 @@ footer .footer-right-section ul li a:hover {
 
 footer .footer-right-section ul li a:visited {
   color: #5e0780;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer .footer-section {
+    width: 100%;
+  }
 }

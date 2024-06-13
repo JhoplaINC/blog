@@ -20,12 +20,11 @@
                 <div class="categories-bar" [class.active]="categoriesVisible">
                     <span (click)="closeCategories()" class="close-categories">&times;</span>
                     <div class="tags">
-                        <div *ngFor="let tag of tags" class="tag-container">
-                            <a class="tag" routerLink="posts/{{tag.name}}" (click)="closeCategories()">
-                                {{tag.name}}
+                        <ng-container *ngFor="let tag of tags" >
+                            <a class="tag-container" routerLink="posts/{{tag.name}}" (click)="closeCategories()">
+                                {{tag.name}} ({{tag.total}})
                             </a>
-                            <span class="tag-total">{{tag.total}}</span>
-                        </div>
+                        </ng-container>
                     </div>
                 </div>
             </ul>
