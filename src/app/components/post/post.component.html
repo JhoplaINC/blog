@@ -1,28 +1,39 @@
 <div class="post">
     <div class="post-header">
-        <h4>{{post.title}}</h4>
-        <div class="author-info">
-            <img src="{{post.user.image}}" alt="Photo">
-            <p> {{post.user.firstName}} {{post.user.lastName}} </p>
+        <div class="author">
+            <img src="{{post.user.image}}" alt="Image">
+            <p class="author-name">
+                {{post.user.firstName}} {{post.user.lastName}}
+            </p>
         </div>
+        <p class="post-title">
+            {{post.title}}
+        </p>
     </div>
     <div class="post-body">
         <p>{{post.body}}</p>
     </div>
     <div class="post-footer">
-        <span class="likes">
-            <fa-icon [icon]="faLike"></fa-icon> {{post.reactions.likes}}
-        </span>
-        <span class="likes">
-            <fa-icon [icon]="faDislike"></fa-icon> {{post.reactions.dislikes}}
-        </span>
-        <span class="views">
-            <fa-icon [icon]="faView"></fa-icon> {{post.views}}
-        </span>
-        <div *ngFor="let tag of post.tags">
-            <a routerLink="/posts/{{tag}}">
-                {{tag}}
-            </a>
+        <div class="tags">
+            <span>
+                <fa-icon [icon]="faTags"></fa-icon> Tags
+            </span>
+            <p class="tag" *ngFor="let tag of post.tags">
+                <a routerLink="/posts/{{tag}}">
+                    {{tag}}
+                </a>
+            </p>
+        </div>
+        <div class="interactions">
+            <span class="interaction">
+                <fa-icon [icon]="faLike"></fa-icon> {{post.reactions.likes}}
+            </span>
+            <span class="interaction">
+                <fa-icon [icon]="faDislike"></fa-icon> {{post.reactions.dislikes}}
+            </span>
+            <span class="interaction">
+                <fa-icon [icon]="faView"></fa-icon> {{post.views}}
+            </span>
         </div>
     </div>
 </div>

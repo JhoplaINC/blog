@@ -4,7 +4,7 @@ import { PostService } from '../../services/post.service';
 import { UserService } from '../../services/user.service';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faThumbsUp, faThumbsDown, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faThumbsDown, faEye, faTags } from '@fortawesome/free-solid-svg-icons';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -24,7 +24,8 @@ export class PostComponent {
   faLike = faThumbsUp;
   faDislike = faThumbsDown;
   faView = faEye;
-  // postId!: number;
+  faTags = faTags;
+  
   post: {
     id: 0,
     title: '',

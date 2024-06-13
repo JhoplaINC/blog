@@ -105,7 +105,8 @@
 
 .interactions .interaction {
     display: flex;
-    width: 75px;
+    margin-left: 20px;
+    width: auto;
 }
 
 .interaction fa-icon {
