@@ -1,11 +1,11 @@
 <h1 class="text-center mt-3 mb-5 text-decoration-underline">Publicaciones</h1>
 
-<div *ngFor="let post of posts" class="posts">
-    <div class="post">
+<div class="posts">
+    <div class="post" *ngFor="let post of posts">
         <div class="post-header">
             <div class="author">
+                <img src="{{post.user.image}}" alt="Image">
                 <p class="author-name">
-                    <img src="{{post.user.image}}" alt="Image">
                     {{post.user.firstName}} {{post.user.lastName}}
                 </p>
             </div>
@@ -16,25 +16,32 @@
             </p>
         </div>
         <div class="post-body">
-            {{post.body}}
+            <p>
+                {{post.body}}
+            </p>
         </div>
         <div class="post-footer">
-            <span class="tags" *ngFor="let tag of post.tags">
-                <p class="tag">
+            <span class="tags">
+                <span>
+                    <fa-icon [icon]="faTags"></fa-icon> Tags
+                </span>
+                <p class="tag" *ngFor="let tag of post.tags">
                     <a routerLink="/posts/{{tag}}">
                         {{tag}}
                     </a>
                 </p>
             </span>
-            <span class="likes">
-                <fa-icon [icon]="faLike"></fa-icon> {{post.reactions.likes}}
-            </span>
-            <span class="likes">
-                <fa-icon [icon]="faDislike"></fa-icon> {{post.reactions.dislikes}}
-            </span>
-            <span class="views">
-                <fa-icon [icon]="faView"></fa-icon> {{post.views}}
-            </span>
+            <div class="interactions">
+                <span class="interaction">
+                    <fa-icon [icon]="faLike"></fa-icon> {{post.reactions.likes}}
+                </span>
+                <span class="interaction">
+                    <fa-icon [icon]="faDislike"></fa-icon> {{post.reactions.dislikes}}
+                </span>
+                <span class="interaction">
+                    <fa-icon [icon]="faView"></fa-icon> {{post.views}}
+                </span>
+            </div>
         </div>
     </div>
 </div>

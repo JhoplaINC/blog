@@ -6,13 +6,108 @@
 }
 
 .posts .post {
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.05);;
     display: flex;
     flex-direction: column;
     margin: 0 0 50px;
+    padding: 25px;
 }
 
-.post .post-body {
+.post .post-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.post-header .author {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.author img {
+    width: 45px;
+}
+
+.author .author-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.post-header .post-title {
+    color: rgb(55, 55, 55);
+    width: 100%;
+}
+
+.post-header .post-title a {
+    color: rgb(55, 55, 55);
+    font-size: 20px;
+}
+
+.post-header .post-title a:hover {
+    color: rgb(105, 105, 105);
+}
+
+.post-body p {
+    font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.post .post-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-footer .tags {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    padding: 5px 20px;
+    text-align: end;
+    width: 100%;
+}
+
+.tags .tag {
+    background-color: var(--bs-dark);
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 5px 20px;
+    width: auto;
+}
+
+.tag:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.tag a {
+    color: rgb(220, 220, 220);
+}
+
+.tag a:hover {
+    color: rgb(240, 240, 240);
+}
+
+.post-footer .interactions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.interactions .interaction {
+    display: flex;
+    width: 75px;
+}
+
+.interaction fa-icon {
+    margin-right: 5px;
 }

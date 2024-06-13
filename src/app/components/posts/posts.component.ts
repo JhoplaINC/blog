@@ -6,7 +6,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faThumbsUp, faThumbsDown, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp, faThumbsDown, faEye, faTags } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-posts',
@@ -25,6 +25,7 @@ export class PostsComponent {
   faLike = faThumbsUp;
   faDislike = faThumbsDown;
   faView = faEye;
+  faTags = faTags;
   
   posts: any[] = [];
 

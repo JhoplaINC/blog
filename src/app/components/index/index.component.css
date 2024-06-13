@@ -1,0 +1,37 @@
+h1, h4, p {
+    color: rgb(75, 75, 75);
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px auto 50px;
+}
+
+.description-container {
+    align-items: center;
+    background-color: rgba(55, 55, 55, .2);
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 45px;
+    padding: 15px 0;
+    width: 75%;
+}
+
+.description-container h4 {
+    text-decoration: underline;
+}
+
+.description-container p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.description-container p a {
+    color: rgb(75, 75, 75);
+}
+
+.description-container p a:hover {
+    color: rgb(35, 35, 35);
+}
